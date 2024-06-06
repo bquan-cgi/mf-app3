@@ -4,12 +4,16 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "dev": "vite --port 3003 --strictPort",
+    "build": "vite build",
+    "preview": "vite preview --port 3003 --strictPort",
+    "serve": "vite preview --port 3003 --strictPort",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "dependencies": {
+    "@group-ui/design-tokens-css": "https://groupui-design-tokens.vwapps.run/packages/latest/css/design-tokens-css.tgz",
+    "@group-ui/group-ui-assets": "https://assets.groupui.vwapps.run/latest/packages/group-ui-assets.tgz",
+    "@group-ui/group-ui-react": "https://groupui.vwapps.run/specific/10.1.0/versioned/group-ui-react.tgz",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
